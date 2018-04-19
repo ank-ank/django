@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+<html>
+<head>
+{% block head %}
+<title> signin </title>
+{% endblock %}
+</head>
+<body>
+{% block body %}
+<div class="container">
+<h1>Welcome!</h1>   
+<p>you can login here</p>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+</form>
+<button class="btn btn-outline-danger" type="button" name="button">login</button>
+</div>
+{% endblock %}
+</body>
+</html>
